@@ -1,7 +1,7 @@
 var server = require('http').createServer(handler);
 var Firebase = require('firebase');
 var rootRef = new Firebase('https://socket.firebaseio.com/');
-var io = require('/usr/local/lib/node_modules/socket.io')(server);
+var io = require('socket.io')(server);
 
 
 function handler (req, res) {
