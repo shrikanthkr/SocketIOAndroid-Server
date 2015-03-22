@@ -10,7 +10,9 @@
     "type": "git",
     "url": ""
   },
-
+  "scripts": {
+      "start": "node socket.js"
+    },
   "author": "Shrikanth",
   "license": "ISC",
   "dependencies": {
