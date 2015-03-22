@@ -2,7 +2,7 @@ var server = require('http').createServer(handler);
 var Firebase = require('firebase');
 var rootRef = new Firebase('https://socket.firebaseio.com/');
 var io = require('socket.io')(server);
-
+var port = process.env.PORT || 3000;
 
 function handler (req, res) {
    res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -28,4 +28,4 @@ io.on('connection', function(socket){
 });
 
 
-server.listen(3000);
+server.listen(port);
