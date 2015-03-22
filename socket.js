@@ -1,10 +1,15 @@
-var server = require('http').createServer();
+var server = require('http').createServer(handler);
 var Firebase = require('firebase');
 var rootRef = new Firebase('https://socket.firebaseio.com/');
 var io = require('/usr/local/lib/node_modules/socket.io')(server);
 
 
-
+function handler (req, res) {
+   res.writeHead(200, {'Content-Type': 'text/plain'});
+      res.write('hello');
+      res.write(':');
+      res.end('World\n');
+}
 
 
 io.on('connection', function(socket){
