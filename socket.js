@@ -18,10 +18,11 @@ rootRef.on('child_added', function(dataSnapshot) {
  });
 
 io.on('connection', function(socket){
-  console.log(socket);
   rootRef.on("value", function(dataSnapshot) {
-    io.sockets.emit('receive',JSON.stringify(dataSnapshot.val()));
-  });
+    	io.sockets.emit('receive',JSON.stringify(dataSnapshot.val()));
+  	},function (errorObject) {
+  		console.log("The read failed: " + errorObject.code);
+	});
   socket.on('message', function(data){
     	 rootRef.push(data );
     });
