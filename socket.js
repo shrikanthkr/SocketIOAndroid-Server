@@ -14,7 +14,6 @@ function handler (req, res) {
 
 rootRef.on('child_added', function(dataSnapshot) {
     console.log("Fire base set : "+JSON.stringify(dataSnapshot.val()));
-
     io.sockets.emit('receive',JSON.stringify(dataSnapshot.val()));
  });
 
@@ -25,8 +24,7 @@ io.on('connection', function(socket){
 	  	for(item in data){
 	  		intial_data.push(data[item]);
 	  	}
-	  	console.log("Initial Data: " + JSON.stringify(intial_data));
-	    socket.emit('receive',JSON.stringify(intial_data));
+	    socket.emit('intial_data',JSON.stringify(intial_data));
   	},function (errorObject) {
   		console.log("The read failed: " + errorObject.code);
 	});
