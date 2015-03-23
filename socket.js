@@ -12,20 +12,21 @@ function handler (req, res) {
 }
 
 
+rootRef.on('child_added', function(dataSnapshot) {
+    console.log("Fire base set : "+JSON.stringify(dataSnapshot.val()));
+    io.sockets.emit('receive',JSON.stringify(dataSnapshot.val()));
+ });
+
 io.on('connection', function(socket){
-    rootRef.off('child_added');
-    rootRef.on('child_added', function(dataSnapshot) {
-        console.log("Fire base set : "+JSON.stringify(dataSnapshot.val()));
-        socket.emit('receive',JSON.stringify(dataSnapshot.val()));
-     });
-  socket.on('disconnect', function(){
-    rootRef.off('child_added');
+  console.log(socket);
+  rootRef.on("value", function(dataSnapshot) {
+    io.sockets.emit('receive',JSON.stringify(dataSnapshot.val()));
   });
   socket.on('message', function(data){
-        console.log("Push Data: "+ data);
     	 rootRef.push(data );
     });
 });
+ 
 
 
 server.listen(port);
