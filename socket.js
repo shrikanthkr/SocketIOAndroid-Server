@@ -1,8 +1,8 @@
 var server = require('http').createServer(handler);
-var Firebase = require('firebase');
-var rootRef = new Firebase('https://socket.firebaseio.com/');
 var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
+var socket_handler = require('./socket_handler');
+var Firebase = require('./firebase_handler').getInstance();
 
 function handler (req, res) {
    res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -12,13 +12,14 @@ function handler (req, res) {
 }
 
 
-rootRef.on('child_added', function(dataSnapshot) {
-    console.log("Fire base set : "+JSON.stringify(dataSnapshot.val()));
+Firebase.on('child_added', function(dataSnapshot) {
+    console.log("Fire base data received : "+JSON.stringify(dataSnapshot.val()));
     io.sockets.emit('receive',JSON.stringify(dataSnapshot.val()));
  });
 
 io.on('connection', function(socket){
-  rootRef.once("value", function(dataSnapshot) {
+  socket_handler.push(socket);
+  Firebase.once("value", function(dataSnapshot) {
 	  	var intial_data = [],
 	  	data = dataSnapshot.val();
 	  	for(item in data){
@@ -29,8 +30,11 @@ io.on('connection', function(socket){
   		console.log("The read failed: " + errorObject.code);
 	});
   socket.on('message', function(data){
-    	 rootRef.push(data );
+    	 Firebase.push(data);
     });
+  socket.on('disconnect', function(){
+    socket_handler.delete(this);
+  });
 });
  
 
