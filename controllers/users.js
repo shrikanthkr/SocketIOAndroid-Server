@@ -11,9 +11,9 @@ module.exports = (function(){
 			console.log(e.message);
 		}
 	}
-	function join_room (socket,params) {
-		socket.join(params.room_name);
-		console.log('Joined room '+socket.rooms);
+	function join_room (socket,room_name) {
+		socket.join(room_name);
+		console.log('Joined room '+room_name);
 	}
 	function create_user (socket,params) {
 		models.users.create(params,function (err,result) {

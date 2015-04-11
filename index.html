@@ -12,7 +12,7 @@
 			user_name: 'shrikanth',
 			password: 'admin123'
 		});
-		
+
 		socket.on('create_user', function (data) {
 			console.log(data);
 			socket.emit('auth',{
@@ -26,9 +26,7 @@
 		socket.on('updateChat', function (data) {
 			console.log(data);
 		});
-		socket.on('updateChat', function (data) {
-			console.log(data);
-		});
+
 	</script>
 </body>
 </html>
