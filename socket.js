@@ -1,5 +1,5 @@
 var server = require('http').createServer(handler);
-var io = require('socket.io')(server);
+var io  = GLOBAL.io= require('socket.io')(server);
 var port = process.env.PORT || 3000;
 var socket_handler = require('./socket_handler');
 var models ;
@@ -30,20 +30,6 @@ io.on('connection', function(socket){
       console.log('To ' + route.controller+":"+route.action);
       controllers[route.controller][route.action].call(this,socket,data);
     });
-  });
-  /*  socket.on('join_room', function(data){
-    socket_handler.push(socket,data);
-    console.log('Socket connectd:' + socket.id);
-    console.log("Room length"+ socket.rooms.length);
-  });
-*/
-/* socket.on('auth', function(data){
-
-  });*/
-
-  socket.on('message', function(data){
-    io.to(data.room_name).emit('updateChat',data);
-    console.log('Message: '+ data.receiver);
   });
   socket.on('disconnect', function(){
     console.log('Socket disconnectd:' + socket.id);

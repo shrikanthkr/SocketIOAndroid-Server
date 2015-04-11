@@ -9,6 +9,11 @@ module.exports = (function(){
 			url: 'join_room',
 			action: 'join_room',
 			controller: 'users'
+		},
+		{
+			url: 'message',
+			action: 'message',
+			controller: 'messages'
 		}
 	]
 })();
