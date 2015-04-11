@@ -14,6 +14,11 @@ module.exports = (function(){
 			url: 'message',
 			action: 'message',
 			controller: 'messages'
+		},
+		{
+			url: 'create_user',
+			action: 'create_user',
+			controller: 'users'
 		}
 	]
 })();

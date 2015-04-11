@@ -9,7 +9,7 @@ GLOBAL.observer.subscribe(this, "db_init", function(who, data) {
   console.log('model started');
     GLOBAL.models = require('require-all')(__dirname + '/models');
 });
-
+GLOBAL.bcrypt = require('bcryptjs');
 GLOBAL.libs = require('require-all')({
   dirname     :  __dirname + '/libs',
   resolve     : function (libs) {

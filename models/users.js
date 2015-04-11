@@ -10,11 +10,11 @@ module.exports = (function(){
 		this.flash_message
 	} 
 	
-	function insert(data,callback){
+	function autheticate(data,callback){
 
 		find(data.user_name,function(err,item){
 			console.log(item);
-			if(item && item.user_name){
+			if(item && item.user_name && GLOBAL.bcrypt.compareSync(data.password, item.password) ){
 				callback(item);
 			}else{
 				callback({error: 'Wrong username or password'});
@@ -23,7 +23,8 @@ module.exports = (function(){
 		});
 		
 	}
-	function create_user(data,callback){
+	function create(data,callback){
+		data.password = GLOBAL.bcrypt.hashSync(data.password, GLOBAL.bcrypt.genSaltSync(10));
 		collection.insert(data,{w:1}, callback);
 	}
 	function find(user_name,callback){
@@ -32,6 +33,7 @@ module.exports = (function(){
 	}
 	return{
 		find: find,
-		insert: insert
+		autheticate: autheticate,
+		create: create
 	}
 })();

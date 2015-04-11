@@ -19,7 +19,7 @@
     "socket.io": "*",
     "firebase" : "*",
     "mongodb": "*",
-    "bcrypt-nodejs": "*",
+    "bcryptjs": "*",
     "redis-jsonify": "*",
     "require-all": "*",
     "node-observer":"*"
