@@ -1,7 +1,6 @@
 var server = require('http').createServer(handler);
 var io  = GLOBAL.io= require('socket.io')(server);
 var port = process.env.PORT || 3000;
-var socket_handler = require('./socket_handler');
 var models ;
 GLOBAL.observer = require("node-observer");
 var configs = require('require-all')(__dirname + '/configs');
