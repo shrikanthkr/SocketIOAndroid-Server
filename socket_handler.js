@@ -1,14 +1,13 @@
 var socket_handler =(function(){
-	var sockets = {};
 	return{
-		push: function(socket){
-			sockets[socket.id] = socket;
-			console.log('Added '+socket.id);
+		push: function(socket,data){
+			socket.join(data.room_name);
+			console.log('Joined room '+socket.rooms);
 		},
-		delete: function(socket){
-			delete sockets[socket.id];
+		delete: function(socket,data){
 			console.log('Removed '+socket.id);
 		}
+
 	}
 })();
 module.exports  = socket_handler;

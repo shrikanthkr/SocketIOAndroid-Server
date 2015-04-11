@@ -17,6 +17,11 @@
   "license": "ISC",
   "dependencies": {
     "socket.io": "*",
-    "firebase" : "*"
+    "firebase" : "*",
+    "mongodb": "*",
+    "bcrypt-nodejs": "*",
+    "redis-jsonify": "*",
+    "require-all": "*",
+    "node-observer":"*"
   }
 }
