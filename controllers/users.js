@@ -9,7 +9,8 @@ module.exports = (function(){
 		}
 	}
 	function join_room (socket,params) {
-		// body...
+		socket.join(params.room_name);
+		console.log('Joined room '+socket.rooms);
 	}
 	return{
 		join_room: join_room,

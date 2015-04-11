@@ -31,6 +31,7 @@ io.on('connection', function(socket){
       controllers[route.controller][route.action].call(this,socket,data);
     });
   });
+
   socket.on('disconnect', function(){
     console.log('Socket disconnectd:' + socket.id);
     console.log("Room length"+ socket.rooms.length);
