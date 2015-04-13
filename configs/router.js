@@ -11,13 +11,18 @@ module.exports = (function(){
 			controller: 'users'
 		},
 		{
+			url: 'room:create',
+			action: 'create',
+			controller: 'rooms'
+		},
+		{
 			url: 'message',
 			action: 'message',
 			controller: 'messages'
 		},
 		{
-			url: 'create_user',
-			action: 'create_user',
+			url: 'user:create',
+			action: 'create',
 			controller: 'users'
 		}
 	]

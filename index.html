@@ -8,12 +8,12 @@
 <body>
 	<script>
 		var socket = io.connect('http://localhost:3000');
-		socket.emit('create_user',{
+		socket.emit('user:create',{
 			user_name: 'shrikanth',
 			password: 'admin123'
 		});
 
-		socket.on('create_user', function (data) {
+		socket.on('user:create', function (data) {
 			console.log(data);
 			socket.emit('auth',{
 				user_name: 'shrikanth',
