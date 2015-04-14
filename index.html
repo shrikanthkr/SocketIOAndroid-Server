@@ -6,12 +6,54 @@
 
 </head>
 <body>
-<script>
-  var socket = io.connect('http://localhost:3000');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-</script>
+	<script>
+		var socket = io.connect('http://localhost:3000');
+		socket.emit('user:create',{
+			user_name: 'v',
+			password: 'admin123'
+		});
+		
+		
+		setTimeout(function(){
+			socket.emit('user:create',{
+			user_name: 'shrikanth',
+			password: 'admin123'
+		});
+			socket.off('user:create').on('user:create', function (data) {
+			console.log(data);
+			socket.emit('auth',{
+				user_name: 'shrikanth',
+				password: 'admin123'
+			});
+			});
+		},1000);
+		
+
+		
+		socket.on('auth', function (data) {
+			console.log(data);
+			var user = data;
+			socket.emit('rooms:add',{
+				user_id: 'shrikanth',
+				room_id: data.rooms[0]._id
+			});
+			socket.off('rooms:add').on('rooms:add', function (data) {
+				console.log(data);
+
+				console.log(data);
+				socket.emit('rooms:new',{
+					room_name: 'room1'
+				});
+				socket.off('rooms:new').on('rooms:new', function (data) {
+					console.log(data);
+				});
+				socket.off('messages:new').on('messages:new', function (data) {
+					console.log(data);
+				});
+			});
+
+		});
+
+	</script>
 </body>
 </html>
