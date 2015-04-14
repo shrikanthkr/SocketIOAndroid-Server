@@ -2,8 +2,9 @@ module.exports = (function(){
 	function auth (socket,params) {
 		try{
 			User.autheticate(params,function(data){
+				socket.client.user = data;
 				if(!data.error){
-					join_room(socket,data.user_name);
+					join_rooms(socket,data);
 				}
 				socket.emit('auth',data);
 			});
@@ -11,9 +12,13 @@ module.exports = (function(){
 			socket.emit('auth',e);
 		}
 	}
-	function join_room (socket,room_name) {
-		socket.join(room_name);
-		console.log('Joined room '+room_name);
+	function join_rooms (socket,data) {
+			data.rooms.forEach(function(value){
+				socket.join(value._id);
+				console.log(value);
+			});
+		
+		
 	}
 	function create (socket,params) {
 		User.create(params,function (err,result) {
@@ -21,7 +26,6 @@ module.exports = (function(){
 		});
 	}
 	return{
-		join_room: join_room,
 		auth: auth,
 		create: create
 	}

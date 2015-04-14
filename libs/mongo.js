@@ -1,4 +1,3 @@
-var MongoClient = require('mongodb').MongoClient;
 var mongo = (function(){
 	var DB = null;
 

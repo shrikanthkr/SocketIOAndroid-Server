@@ -20,8 +20,17 @@
 				password: 'admin123'
 			});
 		});
+
 		socket.on('auth', function (data) {
 			console.log(data);
+			socket.emit('rooms:add',{
+				user_id: 'shrikanth',
+				room_id: data.rooms[0]._id
+			});
+			socket.on('rooms:add', function (data) {
+			console.log(data);
+		});
+
 		});
 		socket.on('updateChat', function (data) {
 			console.log(data);

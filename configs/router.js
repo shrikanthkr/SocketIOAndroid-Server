@@ -6,8 +6,13 @@ module.exports = (function(){
 			controller: 'users'
 		},
 		{
-			url: 'join_room',
-			action: 'join_room',
+			url: 'rooms:add',
+			action: 'addToRoom',
+			controller: 'rooms'
+		},
+		{
+			url: 'rooms:leave',
+			action: 'addToRoom',
 			controller: 'users'
 		},
 		{
