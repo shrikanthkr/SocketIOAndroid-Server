@@ -37,6 +37,11 @@ Room = (function(){
 		var o_id = new ObjectID(room_id);
 		collection.findOne({_id: o_id},callback );
 	}
+	function findOneByName(name,callback){
+		collection.findOne({name: name},callback );
+	}
+	
+
 	function findAll(rooms,callback){
 		collection.find({
 			_id: {$in :rooms}
@@ -48,7 +53,8 @@ Room = (function(){
 		create: create,
 		add: add,
 		findOne: findOne,
-		findAll: findAll
+		findAll: findAll,
+		findOneByName: findOneByName
 	}
 	
 })();

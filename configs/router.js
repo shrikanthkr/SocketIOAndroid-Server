@@ -7,7 +7,12 @@ module.exports = (function(){
 		},
 		{
 			url: 'rooms:add',
-			action: 'addToRoom',
+			action: 'add',
+			controller: 'rooms'
+		},
+		{
+			url: 'rooms:new',
+			action: 'new_room',
 			controller: 'rooms'
 		},
 		{

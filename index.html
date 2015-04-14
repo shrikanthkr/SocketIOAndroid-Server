@@ -23,13 +23,22 @@
 
 		socket.on('auth', function (data) {
 			console.log(data);
+			var user = data;
 			socket.emit('rooms:add',{
 				user_id: 'shrikanth',
 				room_id: data.rooms[0]._id
 			});
 			socket.on('rooms:add', function (data) {
-			console.log(data);
-		});
+				console.log(data);
+
+				console.log(data);
+				socket.emit('rooms:new',{
+					room_name: 'room1'
+				});
+				socket.on('rooms:new', function (data) {
+					console.log(data);
+				});
+			});
 
 		});
 		socket.on('updateChat', function (data) {

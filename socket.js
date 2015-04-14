@@ -1,7 +1,6 @@
 var server = require('http').createServer(handler);
 var io  = GLOBAL.io= require('socket.io')(server);
 var port = process.env.PORT || 3000;
-require('scribe-js')();
 TAG = "SOCKETIO";
 Mongo = require('mongodb');
 MongoClient = Mongo.MongoClient;
