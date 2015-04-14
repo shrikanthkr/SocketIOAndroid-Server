@@ -14,8 +14,8 @@ module.exports = (function(){
 	}
 	function join_rooms (socket,data) {
 			data.rooms.forEach(function(value){
-				socket.join(value._id);
-				console.log(value);
+				socket.join(value.name);
+				console.log('!!!!!!!!!!!!!!!'+value.name);
 			});
 		
 		

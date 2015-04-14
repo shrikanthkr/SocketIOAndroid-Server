@@ -1,5 +1,5 @@
 var server = require('http').createServer(handler);
-var io  = GLOBAL.io= require('socket.io')(server);
+Io  = GLOBAL.io= require('socket.io')(server);
 var port = process.env.PORT || 3000;
 TAG = "SOCKETIO";
 Mongo = require('mongodb');
@@ -24,7 +24,7 @@ function handler (req, res) {
  res.end('World\n');
 }
 
-io.on('connection', function(socket){
+Io.on('connection', function(socket){
   configs.router.forEach(function(route){
     socket.on(route.url,function(data){
       console.log('To ' + route.controller+":"+route.action);

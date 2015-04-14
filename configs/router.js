@@ -26,8 +26,8 @@ module.exports = (function(){
 			controller: 'rooms'
 		},
 		{
-			url: 'message',
-			action: 'message',
+			url: 'messages:new',
+			action: 'new_message',
 			controller: 'messages'
 		},
 		{

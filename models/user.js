@@ -28,7 +28,7 @@ User = (function(){
 		findOne(data.user_name,function(err,item){
 			if(item && item.user_name){
 				console.log('Already Exists '+data.user_name);
-				callback({},item);
+				callback({},{error: 'User already exists'});
 			}else{
 				console.log('creating '+data.user_name);
 				data.password = Bcrypt.hashSync(data.password, Bcrypt.genSaltSync(10));
@@ -38,6 +38,7 @@ User = (function(){
 						room = room.ops[0];
 							if(err) {
 								console.log(err)
+
 							}
 							else{
 								user.rooms = [];

@@ -9,18 +9,27 @@
 	<script>
 		var socket = io.connect('http://localhost:3000');
 		socket.emit('user:create',{
+			user_name: 'v',
+			password: 'admin123'
+		});
+		
+		
+		setTimeout(function(){
+			socket.emit('user:create',{
 			user_name: 'shrikanth',
 			password: 'admin123'
 		});
-
-		socket.on('user:create', function (data) {
+			socket.off('user:create').on('user:create', function (data) {
 			console.log(data);
 			socket.emit('auth',{
 				user_name: 'shrikanth',
 				password: 'admin123'
 			});
-		});
+			});
+		},1000);
+		
 
+		
 		socket.on('auth', function (data) {
 			console.log(data);
 			var user = data;
@@ -28,21 +37,21 @@
 				user_id: 'shrikanth',
 				room_id: data.rooms[0]._id
 			});
-			socket.on('rooms:add', function (data) {
+			socket.off('rooms:add').on('rooms:add', function (data) {
 				console.log(data);
 
 				console.log(data);
 				socket.emit('rooms:new',{
 					room_name: 'room1'
 				});
-				socket.on('rooms:new', function (data) {
+				socket.off('rooms:new').on('rooms:new', function (data) {
+					console.log(data);
+				});
+				socket.off('messages:new').on('messages:new', function (data) {
 					console.log(data);
 				});
 			});
 
-		});
-		socket.on('updateChat', function (data) {
-			console.log(data);
 		});
 
 	</script>
