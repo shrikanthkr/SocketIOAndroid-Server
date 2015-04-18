@@ -8,7 +8,7 @@
 <body>
 <h1>Socket io is running</h1>
 	<script>
-		var socket = io.connect('http://localhost:3000');
+		var socket = io.connect('/');
 		socket.emit('user:create',{
 			user_name: 'v',
 			password: 'admin123'
