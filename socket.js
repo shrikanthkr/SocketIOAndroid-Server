@@ -18,10 +18,10 @@ Observer.subscribe(this, "db_init", function(who, data) {
 Bcrypt = require('bcryptjs');
 Libs = require('require-all')(__dirname + '/libs');
 function handler (req, res) {
- res.writeHead(200, {'Content-Type': 'text/plain'});
- res.write('hello');
- res.write(':');
- res.end('World\n');
+  var fs = require('fs');
+var index = fs.readFileSync('index.html');
+ res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end(index);
 }
 
 Io.on('connection', function(socket){
