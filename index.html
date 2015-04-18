@@ -6,7 +6,7 @@
 
 </head>
 <body>
-<h1>Socket io is running</h1>
+	<h1>Socket io is running</h1>
 	<script>
 		var socket = io.connect('/');
 		socket.emit('user:create',{
@@ -17,15 +17,15 @@
 		
 		setTimeout(function(){
 			socket.emit('user:create',{
-			user_name: 'shrikanth',
-			password: 'admin123'
-		});
-			socket.off('user:create').on('user:create', function (data) {
-			console.log(data);
-			socket.emit('auth',{
 				user_name: 'shrikanth',
 				password: 'admin123'
 			});
+			socket.off('user:create').on('user:create', function (data) {
+				console.log(data);
+				socket.emit('auth',{
+					user_name: 'shrikanth',
+					password: 'admin123'
+				});
 			});
 		},1000);
 		
