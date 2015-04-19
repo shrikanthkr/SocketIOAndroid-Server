@@ -29,9 +29,16 @@ Io.on('connection', function(socket){
     socket.on(route.url,function(data){
       console.log('To ' + route.controller+":"+route.action);
       console.log('params');
-      data = JSON.parse(data);
       console.log(data);
-      Controllers[route.controller][route.action].call(this,socket,data);
+      try{
+        data = JSON.parse(data);
+        Controllers[route.controller][route.action].call(this,socket,data);
+      }catch(e){
+        socket.emit(route.url,e.message);
+      }
+      
+      
+      
     });
   });
 
