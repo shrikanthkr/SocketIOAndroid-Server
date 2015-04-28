@@ -22,6 +22,7 @@
     "require-all": "*",
     "node-observer":"*",
     "socket.io-redis":"*",
+    "redis":"*",
     "sticky-session":"*",
     "pm2": "*"
   },

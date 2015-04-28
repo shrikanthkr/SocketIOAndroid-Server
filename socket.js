@@ -1,17 +1,32 @@
 var port = process.env.PORT || 3000;
-var redis = require('socket.io-redis');
+var redis = require('redis').createClient(process.env.REDIS_PORT || 6379, process.env.REDIS_HOST ||  '127.0.0.1', { detect_buffers: true, auth_pass: process.env.REDIS_AUTH + ""  });
 
-var sticky = require('sticky-session');
-var server = require('http').createServer(handler),
-redis = require('socket.io-redis')  // socket.ioにredisがある
-    , redisConf = { host: '127.0.0.1', port: 6379 };
+var adapter = require('socket.io-redis');
+/*var pub = redis(process.env.REDIS_PORT || 6379, 
+  process.env.REDIS_HOST ||  '127.0.0.1', 
+  { auth_pass:  process.env.REDIS_AUTH + ""  });
+var sub = redis(process.env.REDIS_PORT || 6379, process.env.REDIS_HOST ||  '127.0.0.1', { detect_buffers: true, auth_pass: process.env.REDIS_AUTH + ""  });
+
+*/
+var server = require('http').createServer(handler);
 
 Io  = require('socket.io').listen(server);
-Io.adapter(redis({
-    redisPub: redisConf,
-    redisSub: redisConf,
-    redisClient: redisConf
-}));
+
+
+Io.adapter(adapter());
+
+var redisIsReady = false;
+redis.on('error', function(err) {
+    redisIsReady = false;
+    console.log('redis is not running');
+    console.log(err);
+});
+redis.on('ready', function() {
+    redisIsReady = true;
+    console.log('redis is running');
+});
+
+
 TAG = "SOCKETIO";
 Mongo = require('mongodb');
 MongoClient = Mongo.MongoClient;
