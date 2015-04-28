@@ -4,7 +4,7 @@
   "description": "An example module to illustrate the usage of a package.json",
   "author": "Shrikanth R",
   "scripts": {
-    "start": "node socket.js"
+    "start": "node_modules/pm2/bin/pm2 kill; node_modules/pm2/bin/pm2 start socket.js -i 0"
   },
   "repository": {
   "type": "git",
