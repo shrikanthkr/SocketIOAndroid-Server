@@ -4,13 +4,14 @@ var mongo = (function(){
 	password = process.env.MONGO_HQ_PASSWORD,
 	mongo_url = "mongodb://"+username+":"+password+"@dogen.mongohq.com:10006/socketio_sandbox";
 	function init(){
+		console.log("Initializing Mongo");
 			MongoClient.connect(mongo_url, function(err, db) {
 				if(!err) {
 					console.log("We are connected");
 					console.log('Mongo Initiated');
 					Observer.send(this, "db_init", db);
 				}else{
-					console.log('Not inititated');
+					console.log('Not inititated : ' + err);
 				}
 			});
 	}

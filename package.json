@@ -1,27 +1,36 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "socket.js",
+  "name": "Socke-IO-Server",
+  "version": "0.12.0",
+  "description": "An example module to illustrate the usage of a package.json",
+  "author": "Shrikanth R",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node socket.js"
   },
   "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "scripts": {
-      "start": "node socket.js"
-    },
-  "author": "Shrikanth",
-  "license": "ISC",
+  "type": "git",
+  "url": "https://github.com/shrikanthkr/SocketIOAndroid-Server.git"
+},
+  "bugs": {
+  "url": "https://github.com/shrikanthkr/SocketIOAndroid-Server/issues"
+},
   "dependencies": {
-    "socket.io": "*",
+     "socket.io": "*",
     "firebase" : "*",
     "mongodb": "*",
     "bcryptjs": "*",
     "redis-jsonify": "*",
     "require-all": "*",
-    "node-observer":"*"
-  }
+    "node-observer":"*",
+    "socket.io-redis":"*",
+    "sticky-session":"*",
+    "pm2": "*"
+  },
+  "devDependencies": {
+   
+  },
+  "preferGlobal": true,
+  "private": true,
+  "analyze": true,
+  "license": "MIT"
 }
+  
