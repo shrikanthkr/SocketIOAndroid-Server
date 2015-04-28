@@ -2,9 +2,9 @@ var port = process.env.PORT || 3000;
 var redis_port = process.env.REDIS_PORT;
 var redis_host = process.env.REDIS_HOST ;
  console.log('redis:'+redis_host);
-var redis = require('redis').createClient(redis_port, redis_host);
+/*var redis = require('redis').createClient(redis_port, redis_host);
 redis.auth(process.env.REDIS_AUTH );
-var adapter = require('socket.io-redis');
+var adapter = require('socket.io-redis');*/
 /*var pub = redis(process.env.REDIS_PORT || 6379, 
   process.env.REDIS_HOST ||  '127.0.0.1', 
   { auth_pass:  process.env.REDIS_AUTH + ""  });
@@ -16,7 +16,7 @@ var server = require('http').createServer(handler);
 Io  = require('socket.io').listen(server);
 
 
-Io.adapter(adapter({pubClient: redis, subClient: redis} ));
+/*Io.adapter(adapter({pubClient: redis, subClient: redis} ));
 
 var redisIsReady = false;
 redis.on('error', function(err) {
@@ -27,7 +27,7 @@ redis.on('error', function(err) {
 redis.on('ready', function() {
     redisIsReady = true;
     console.log('redis is running');
-});
+});*/
 
 
 TAG = "SOCKETIO";
@@ -62,7 +62,7 @@ Io.on('connection', function(socket){
       console.log('params');
 
       try{
-        data = (data instanceof String) ? JSON.parse(data):data;
+        data = JSON.parse(data);
         console.log(data);
         Controllers[route.controller][route.action].call(this,socket,data);
        
