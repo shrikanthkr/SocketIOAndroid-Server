@@ -14,8 +14,16 @@ module.exports = (function(){
 	}
 	function index(socket,params) {
 		console.log('Message: '+ params.room_name);
+		params.user_name =  socket.client.user.user_name;
 		Message.find(params,function(err,item){
-			console.log(item);
+			if (err) {
+				console.log(err);
+				socket.emit('messages:index',err);
+			} else{
+				console.log(item);
+				socket.emit('messages:index',item);
+			};
+			
 		});
 	}
 	return{

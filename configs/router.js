@@ -31,6 +31,11 @@ module.exports = (function(){
 			controller: 'messages'
 		},
 		{
+			url: 'messages:index',
+			action: 'index',
+			controller: 'messages'
+		},
+		{
 			url: 'user:create',
 			action: 'create',
 			controller: 'users'

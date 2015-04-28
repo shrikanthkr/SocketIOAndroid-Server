@@ -63,8 +63,9 @@ Io.on('connection', function(socket){
 
       try{
         data = (data instanceof String) ? JSON.parse(data):data;
-        Controllers[route.controller][route.action].call(this,socket,data);
         console.log(data);
+        Controllers[route.controller][route.action].call(this,socket,data);
+       
       }catch(e){
         console.log(e);
         socket.emit(route.url,e.message);
