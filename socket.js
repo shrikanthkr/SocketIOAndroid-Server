@@ -12,9 +12,9 @@ var server = require('http').createServer(handler);
 
 Io  = require('socket.io').listen(server);
 
-/*
-Io.adapter(adapter());
 
+Io.adapter(adapter());
+/*
 var redisIsReady = false;
 redis.on('error', function(err) {
     redisIsReady = false;
