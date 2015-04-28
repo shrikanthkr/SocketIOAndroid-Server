@@ -1,10 +1,10 @@
 {
-  "name": "socket",
+  "name": "Socke-IO-Server",
   "version": "0.12.0",
   "description": "An example module to illustrate the usage of a package.json",
   "author": "Shrikanth R",
   "scripts": {
-    "start": "node socket.js"
+    "start": "pm2 kill; pm2 start socket.js -i 0 --log pm2.log -o pm2_out.log -e pm2_error.log"
   },
   "repository": {
   "type": "git",
