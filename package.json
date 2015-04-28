@@ -23,6 +23,7 @@
     "node-observer":"*",
     "socket.io-redis":"*",
     "redis":"*",
+    "hiredis": "*",
     "pm2": "*"
   },
   "devDependencies": {
