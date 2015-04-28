@@ -20,11 +20,11 @@ Message = (function(){
 		collection.find(
 		{
 			$or :[{
-						to: params.room_name, sender: params.user_name,
-					},
-					{
-					to: params.user_name, sender: params.room_name
-					
+				to: params.room_name, sender: params.user_name,
+			},
+			{
+				to: params.user_name, sender: params.room_name
+				
 			}]	
 		}
 
