@@ -16,7 +16,7 @@ var server = require('http').createServer(handler);
 Io  = require('socket.io').listen(server);
 
 
-Io.adapter(adapter());
+Io.adapter(adapter({pubClient: redis, subClient: redis} ));
 
 var redisIsReady = false;
 redis.on('error', function(err) {
