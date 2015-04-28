@@ -1,5 +1,7 @@
 var port = process.env.PORT || 3000;
-var redis = require('redis').createClient(process.env.REDIS_PORT || 6379, process.env.REDIS_HOST ||  '127.0.0.1', { detect_buffers: true, auth_pass: process.env.REDIS_AUTH + ""  });
+var redis_port = process.env.REDIS_PORT || 6379;
+var redis_host = process.env.REDIS_HOST ||  '127.0.0.1';
+var redis = require('redis').createClient(redis_port, redis_host, { detect_buffers: true, auth_pass: process.env.REDIS_AUTH + ""  });
 
 var adapter = require('socket.io-redis');
 /*var pub = redis(process.env.REDIS_PORT || 6379, 
