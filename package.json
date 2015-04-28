@@ -1,5 +1,5 @@
 {
-  "name": "Socke-IO-Server",
+  "name": "socket",
   "version": "0.12.0",
   "description": "An example module to illustrate the usage of a package.json",
   "author": "Shrikanth R",
