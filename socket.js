@@ -1,5 +1,5 @@
 var port = process.env.PORT || 3000;
-var redis = require('redis').createClient(process.env.REDIS_PORT || 6379, process.env.REDIS_HOST ||  '127.0.0.1', { detect_buffers: true, auth_pass: process.env.REDIS_AUTH + ""  });
+//var redis = require('redis').createClient(process.env.REDIS_PORT || 6379, process.env.REDIS_HOST ||  '127.0.0.1', { detect_buffers: true, auth_pass: process.env.REDIS_AUTH + ""  });
 
 var adapter = require('socket.io-redis');
 /*var pub = redis(process.env.REDIS_PORT || 6379, 
@@ -12,7 +12,7 @@ var server = require('http').createServer(handler);
 
 Io  = require('socket.io').listen(server);
 
-
+/*
 Io.adapter(adapter());
 
 var redisIsReady = false;
@@ -25,7 +25,7 @@ redis.on('ready', function() {
     redisIsReady = true;
     console.log('redis is running');
 });
-
+*/
 
 TAG = "SOCKETIO";
 Mongo = require('mongodb');
