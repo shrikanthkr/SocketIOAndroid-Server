@@ -7,31 +7,28 @@
     "start": "node socket.js"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/shrikanthkr/SocketIOAndroid-Server.git"
-},
+    "type": "git",
+    "url": "https://github.com/shrikanthkr/SocketIOAndroid-Server.git"
+  },
   "bugs": {
-  "url": "https://github.com/shrikanthkr/SocketIOAndroid-Server/issues"
-},
+    "url": "https://github.com/shrikanthkr/SocketIOAndroid-Server/issues"
+  },
   "dependencies": {
-     "socket.io": "*",
-    "firebase" : "*",
-    "mongodb": "*",
     "bcryptjs": "*",
+    "firebase": "*",
+    "hiredis": "*",
+    "mongodb": "*",
+    "node-observer": "*",
+    "pm2": "*",
+    "redis": "*",
     "redis-jsonify": "*",
     "require-all": "*",
-    "node-observer":"*",
-    "socket.io-redis":"*",
-    "redis":"*",
-    "hiredis": "*",
-    "pm2": "*"
+    "socket.io": "*",
+    "socket.io-redis": "*"
   },
-  "devDependencies": {
-   
-  },
+  "devDependencies": {},
   "preferGlobal": true,
   "private": true,
   "analyze": true,
   "license": "MIT"
 }
-  

@@ -29,7 +29,6 @@ redis.on('ready', function() {
     console.log('redis is running');
 });*/
 
-
 TAG = "SOCKETIO";
 Mongo = require('mongodb');
 MongoClient = Mongo.MongoClient;
@@ -59,7 +58,7 @@ Io.on('connection', function(socket){
   configs.router.forEach(function(route){
     socket.on(route.url,function(data){
       console.log('To ' + route.controller+":"+route.action);
-      console.log('params');
+      console.log('params type'+data.constructor.name);
 
       try{
         data = JSON.parse(data);
@@ -70,9 +69,6 @@ Io.on('connection', function(socket){
         console.log(e);
         socket.emit(route.url,e.message);
       }
-      
-      
-      
     });
   });
 
