@@ -86,6 +86,8 @@ User = (function(){
 	}
 
 	function find_by_phone_numbers(phone_numbers,callback){
+		console.log('find byPhone number');
+		console.log(phone_numbers);
 		collection.find({
 			phone_number: {$in :phone_numbers}
 		},{ user_name :1} ).toArray(callback);

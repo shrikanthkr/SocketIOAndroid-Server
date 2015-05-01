@@ -57,7 +57,7 @@
 			socket.off('rooms:contacts').on('rooms:contacts', function (data) {
 					console.log(data);
 				});
-			phone_string = JSON.stringify({phone_numbers : ['123456789']});
+			phone_string = JSON.stringify( ['123456789']);
 			socket.emit('rooms:contacts',phone_string);
 
 		});*/

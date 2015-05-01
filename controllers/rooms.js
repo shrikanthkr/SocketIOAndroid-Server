@@ -34,7 +34,7 @@ module.exports = (function(){
 	function contacts(socket,params){
 		console.log('getting contacts rooms');
 		var final_room_ids = [];
-		User.find_by_phone_numbers(params.phone_numbers,function(err,users){
+		User.find_by_phone_numbers(params,function(err,users){
 			users.push(socket.client.user._id);
 			UsersRooms.getRooms(_.pluck(users,'_id'),function(err,user_rooms_ids){
 				console.log(user_rooms_ids);
