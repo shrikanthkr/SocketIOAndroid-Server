@@ -3,9 +3,11 @@ module.exports = (function(){
 		try{
 			User.autheticate(params,function(data){
 				socket.client.user = data;
-				if(!data.error){
-					join_rooms(socket,data);
-				}
+				UsersRooms.getRooms([socket.client.user._id],function(err,user_rooms_ids){
+					Room.findAll(user_rooms_ids,function(err,rooms){
+						join_rooms(socket,rooms);
+					});
+				});
 				socket.emit('auth',data);
 			});
 		}catch(e){
@@ -13,12 +15,11 @@ module.exports = (function(){
 		}
 	}
 	function join_rooms (socket,data) {
-			data.rooms.forEach(function(value){
-				socket.join(value.name);
-				console.log('Joining Room: '+value.name);
-			});
-		
-		
+		data.forEach(function(value){
+			socket.join(value.name);
+			console.log('Joining Room: '+value.name);
+		});
+
 	}
 	function create (socket,params) {
 		User.create(params,function (err,result) {

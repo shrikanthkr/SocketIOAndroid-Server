@@ -39,6 +39,11 @@ module.exports = (function(){
 			url: 'user:create',
 			action: 'create',
 			controller: 'users'
+		},
+		{
+			url: 'rooms:contacts',
+			action: 'contacts',
+			controller: 'rooms'
 		}
 	]
 })();

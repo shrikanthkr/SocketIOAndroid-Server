@@ -31,11 +31,7 @@ User = (function(){
 	function autheticate(data,callback){
 			findOne(data.user_name,function(err,item){
 				if(item && item.user_name && Bcrypt.compareSync(data.password, item.password) ){
-					rooms(item._id,function(err,rooms){
-						item.rooms = rooms;
-						callback(item);
-					});
-
+					callback(item);
 				}else{
 					callback({error: 'Wrong username or password'});
 				}
@@ -84,12 +80,20 @@ User = (function(){
 		collection.find({user_name: user_name},callback );
 	}
 	function rooms(user_id,callback){
-		console.log('finding rooms'+user_id);
-		UsersRooms.getRooms(user_id,callback);
+		console.log('finding rooms: ');
+		console.log(user_id);
+		UsersRooms.getRooms(user_ids,callback);
+	}
+
+	function find_by_phone_numbers(phone_numbers,callback){
+		collection.find({
+			phone_number: {$in :phone_numbers}
+		},{ user_name :1} ).toArray(callback);
 	}
 	return{
 		find: find,
 		autheticate: autheticate,
-		create: create
+		create: create,
+		find_by_phone_numbers: find_by_phone_numbers
 	}
 })();

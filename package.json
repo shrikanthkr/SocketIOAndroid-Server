@@ -17,6 +17,7 @@
     "bcryptjs": "*",
     "firebase": "*",
     "hiredis": "*",
+    "lodash": "^3.7.0",
     "mongodb": "*",
     "node-observer": "*",
     "pm2": "*",

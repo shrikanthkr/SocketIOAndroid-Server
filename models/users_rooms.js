@@ -12,14 +12,19 @@ UsersRooms = (function(){
 		collection.insert(params,{w:1},callback);
 	}
 
-	function rooms(user_id,callback){
+	function rooms(user_ids,callback){
 		var users_rooms = [];
-		console.log('getting rooms');
-		collection.find({user_id: user_id}).toArray(function(err,results){
+		console.log('getting rooms for');
+		console.log(user_ids);
+		collection.find({
+			user_id: {$in : user_ids}
+		}).toArray(function(err,results){
+			console.log(results)
 			results.forEach(function(value){
 				users_rooms.push(value.room_id);
 			});
-			Room.findAll(users_rooms,callback);
+			callback(err,users_rooms)
+			
 		});
 	}
 	function users(room_id,callback){

@@ -28,7 +28,7 @@ redis.on('ready', function() {
     redisIsReady = true;
     console.log('redis is running');
 });*/
-
+_ = require('lodash');
 TAG = "SOCKETIO";
 Mongo = require('mongodb');
 MongoClient = Mongo.MongoClient;

@@ -13,7 +13,9 @@
 			user_name: 'v',
 			password: 'admin123'
 		});
-		
+			socket.emit('rooms:contacts',{
+				phone_numbers: ['1234567890']
+			});
 		
 		setTimeout(function(){
 			socket.emit('user:create',{
@@ -52,6 +54,11 @@
 					console.log(data);
 				});
 			});
+			socket.off('rooms:contacts').on('rooms:contacts', function (data) {
+					console.log(data);
+				});
+			phone_string = JSON.stringify({phone_numbers : ['123456789']});
+			socket.emit('rooms:contacts',phone_string);
 
 		});*/
 

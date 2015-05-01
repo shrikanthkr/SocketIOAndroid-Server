@@ -40,11 +40,24 @@ Room = (function(){
 	function findOneByName(name,callback){
 		collection.findOne({name: name},callback );
 	}
-	
+	function findOneName(names,callback){
+		collection.find({
+			name: {$in :names}
+		} ).toArray(function(err,item){
+			callback(err,item);
+		});
+	}
 
 	function findAll(rooms,callback){
 		collection.find({
 			_id: {$in :rooms}
+		} ).toArray(function(err,item){
+			callback(err,item);
+		});
+	}
+		function findAllByName(room_names,callback){
+		collection.find({
+			name: {$in :room_names}
 		} ).toArray(function(err,item){
 			callback(err,item);
 		});
@@ -54,7 +67,8 @@ Room = (function(){
 		add: add,
 		findOne: findOne,
 		findAll: findAll,
-		findOneByName: findOneByName
+		findOneByName: findOneByName,
+		findAllByName: findAllByName
 	}
 	
 })();
