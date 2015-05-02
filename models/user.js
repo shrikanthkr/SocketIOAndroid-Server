@@ -29,15 +29,50 @@ User = (function(){
 		return true;
 	}
 	function autheticate(data,callback){
-			findOne(data.user_name,function(err,item){
-				if(item && item.user_name && Bcrypt.compareSync(data.password, item.password) ){
-					callback(item);
-				}else{
-					callback({error: 'Wrong username or password'});
-				}
+		findOne(data.user_name,function(err,item){
+			if(item && item.user_name && Bcrypt.compareSync(data.password, item.password) ){
+				collection.findAndModify(
+					{user_name: item.user_name} ,//criteria
+					[['_id','asc']],  // sort order
+					 {$set: { token: Randtoken.generate(16) } },//update params
+					 {new : true},
+					 function(err,item){
+					 	if(err){
+					 		callback(err);
+					 	}else{
+					 		callback(item.value);
+					 	}
 
-			});
-		}
+					 });
+				
+			}else{
+				callback({error: 'Wrong username or password'});
+			}
+
+		});
+	}
+	function find_by_token(data,callback){
+		collection.findOne({token: data.token},function(err,item){
+			if(item && item.user_name ){
+				collection.findAndModify(
+					{user_name: item.user_name} ,//criteria
+					[['_id','asc']],  // sort order
+					 {$set: { token: Randtoken.generate(16) } },//update params
+					 {new : true},
+					 function(err,item){
+					 	if(err){
+					 		callback(err);
+					 	}else{
+					 		callback(item.value);
+					 	}
+
+					 });
+			}else{
+				callback({error: 'Invaid Authentication'});
+			}
+
+		});
+	}
 	function create(data,callback){
 		try{
 			validate(data);
@@ -48,6 +83,7 @@ User = (function(){
 				}else{
 					console.log('creating '+data);
 					data.password = Bcrypt.hashSync(data.password, Bcrypt.genSaltSync(10));
+					data.token  = Randtoken.generate(16);
 					collection.insert(data,{w:1}, function(err,user){
 						user = user.ops[0];
 						Room.create({name: user.user_name, user_id:user._id },function(err,room){
@@ -66,7 +102,7 @@ User = (function(){
 
 			});
 		}catch(e){
-				console.log('Caught exceptions on validation'+e);
+			console.log('Caught exceptions on validation'+e);
 			callback({},e);
 		}
 
@@ -96,6 +132,7 @@ User = (function(){
 		find: find,
 		autheticate: autheticate,
 		create: create,
-		find_by_phone_numbers: find_by_phone_numbers
+		find_by_phone_numbers: find_by_phone_numbers,
+		find_by_token: find_by_token
 	}
 })();

@@ -21,6 +21,7 @@
     "mongodb": "*",
     "node-observer": "*",
     "pm2": "*",
+    "rand-token": "^0.2.1",
     "redis": "*",
     "redis-jsonify": "*",
     "require-all": "*",

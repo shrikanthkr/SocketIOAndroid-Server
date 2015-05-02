@@ -14,6 +14,21 @@ module.exports = (function(){
 			socket.emit('auth',e);
 		}
 	}
+	function token_auth (socket,params) {
+		try{
+			User.find_by_token(params,function(data){
+				socket.client.user = data;
+				UsersRooms.getRooms([socket.client.user._id],function(err,user_rooms_ids){
+					Room.findAll(user_rooms_ids,function(err,rooms){
+						join_rooms(socket,rooms);
+					});
+				});
+				socket.emit('auth',data);
+			});
+		}catch(e){
+			socket.emit('auth',e);
+		}
+	}
 	function join_rooms (socket,data) {
 		data.forEach(function(value){
 			socket.join(value.name);
@@ -29,6 +44,7 @@ module.exports = (function(){
 	}
 	return{
 		auth: auth,
-		create: create
+		create: create,
+		token_auth: token_auth
 	}
 })();

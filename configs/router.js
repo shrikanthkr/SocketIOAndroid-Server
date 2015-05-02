@@ -44,6 +44,11 @@ module.exports = (function(){
 			url: 'rooms:contacts',
 			action: 'contacts',
 			controller: 'rooms'
+		},
+		{
+			url: 'users:token_auth',
+			action: 'token_auth',
+			controller: 'users'
 		}
 	]
 })();

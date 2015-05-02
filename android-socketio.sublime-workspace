@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"phone",
+				"phone_numbers"
+			],
+			[
+				"user",
+				"users_rooms"
+			],
+			[
+				"room",
+				"room_ids"
+			],
+			[
+				"va",
+				"validations"
+			],
+			[
 				"if",
 				"ife	if … else"
 			],
@@ -26,10 +42,6 @@
 			[
 				"f",
 				"function"
-			],
-			[
-				"user",
-				"user_id"
 			],
 			[
 				"create",
@@ -107,13 +119,53 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "models/user.js",
+			"settings":
+			{
+				"buffer_size": 2498,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/users.js",
+			"settings":
+			{
+				"buffer_size": 768,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/messages.js",
+			"settings":
+			{
+				"buffer_size": 762,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/message.js",
+			"settings":
+			{
+				"buffer_size": 705,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 138.0,
+		"height": 243.0,
 		"selected_items":
 		[
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Quick Add"
+			],
 			[
 				"push",
 				"Git: Push Current Branch"
@@ -123,15 +175,15 @@
 				"Git: Commit"
 			],
 			[
-				"add",
-				"Git: Quick Add"
-			],
-			[
-				"idne",
-				"Indentation: Reindent Lines"
+				"commit",
+				"Git: Commit"
 			],
 			[
 				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"idne",
 				"Indentation: Reindent Lines"
 			],
 			[
@@ -156,10 +208,6 @@
 			],
 			[
 				"comimt",
-				"Git: Commit"
-			],
-			[
-				"commit",
 				"Git: Commit"
 			],
 			[
@@ -236,27 +284,28 @@
 	},
 	"expanded_folders":
 	[
-		"/home/shrikanth/node-apps/android-socketio"
+		"/home/shrikanth/node-apps/android-socketio",
+		"/home/shrikanth/node-apps/android-socketio/controllers"
 	],
 	"file_history":
 	[
+		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
+		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
+		"/home/shrikanth/node-apps/android-socketio/models/message.js",
+		"/home/shrikanth/node-apps/android-socketio/controllers/users.js",
+		"/home/shrikanth/node-apps/android-socketio/models/room.js",
+		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
+		"/home/shrikanth/node-apps/android-socketio/index.html",
+		"/home/shrikanth/node-apps/android-socketio/models/user.js",
+		"/home/shrikanth/node-apps/android-socketio/socket.js",
+		"/home/shrikanth/node-apps/android-socketio/package.json",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/app/src/main/java/socket/shriku/com/activities/SigninActivity.java",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/SocketIOAndroid.iml",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/settings.gradle",
-		"/home/shrikanth/node-apps/android-socketio/socket.js",
 		"/home/shrikanth/node-apps/android-socketio/controllers/messages.js",
 		"/home/shrikanth/node-apps/android-socketio/libs/mongo.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/users.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
-		"/home/shrikanth/node-apps/android-socketio/models/user.js",
-		"/home/shrikanth/node-apps/android-socketio/models/room.js",
-		"/home/shrikanth/node-apps/android-socketio/index.html",
-		"/home/shrikanth/node-apps/android-socketio/models/message.js",
 		"/home/shrikanth/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/shrikanth/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/package.json",
 		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/lib/Interactor/PushInteractor.js",
 		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/lib/scripts/pm2-init-amazon.sh",
 		"/home/shrikanth/node-apps/android-socketio/Procfile",
@@ -371,7 +420,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -392,6 +441,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"emit",
+			"					\n",
 			"messages",
 			"');\n",
 			"Not Initiated",
@@ -469,8 +520,127 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "models/user.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1913,
+								1913
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 7.0,
+						"translation.y": 502.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "controllers/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								477,
+								477
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "controllers/messages.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								357,
+								357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "models/message.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								367,
+								367
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -533,6 +703,58 @@
 		"selected_items":
 		[
 			[
+				"ro",
+				"configs/router.js"
+			],
+			[
+				"mess",
+				"models/message.js"
+			],
+			[
+				"mes",
+				"controllers/messages.js"
+			],
+			[
+				"rou",
+				"configs/router.js"
+			],
+			[
+				"so",
+				"socket.js"
+			],
+			[
+				"users",
+				"controllers/users.js"
+			],
+			[
+				"user_roo",
+				"models/users_rooms.js"
+			],
+			[
+				"route",
+				"configs/router.js"
+			],
+			[
+				"rouer",
+				"configs/router.js"
+			],
+			[
+				"room",
+				"models/room.js"
+			],
+			[
+				"rooms",
+				"controllers/rooms.js"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"user",
+				"models/user.js"
+			],
+			[
 				"sign",
 				"app/src/main/java/socket/shriku/com/activities/SigninActivity.java"
 			],
@@ -541,20 +763,8 @@
 				"package.json"
 			],
 			[
-				"mess",
-				"models/message.js"
-			],
-			[
 				"router",
 				"configs/router.js"
-			],
-			[
-				"rou",
-				"configs/router.js"
-			],
-			[
-				"users",
-				"controllers/users.js"
 			],
 			[
 				"works",
@@ -591,10 +801,6 @@
 			[
 				"roter",
 				"config/routes.rb"
-			],
-			[
-				"inde",
-				"app/views/projects/index.html.erb"
 			],
 			[
 				"message",
@@ -789,10 +995,6 @@
 				"app/serializers/contest_serializer.rb"
 			],
 			[
-				"user",
-				"app/models/user.rb"
-			],
-			[
 				"routes",
 				"config/routes.rb"
 			],
@@ -847,10 +1049,6 @@
 			[
 				"trans",
 				"app/assets/javascripts/translations.js"
-			],
-			[
-				"route",
-				"config/routes.rb"
 			],
 			[
 				"site",

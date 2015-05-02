@@ -29,6 +29,7 @@ redis.on('ready', function() {
     console.log('redis is running');
 });*/
 _ = require('lodash');
+Randtoken = require('rand-token');
 TAG = "SOCKETIO";
 Mongo = require('mongodb');
 MongoClient = Mongo.MongoClient;
