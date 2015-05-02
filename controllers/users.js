@@ -23,10 +23,10 @@ module.exports = (function(){
 						join_rooms(socket,rooms);
 					});
 				});
-				socket.emit('auth',data);
+				socket.emit('users:token_auth',data);
 			});
 		}catch(e){
-			socket.emit('auth',e);
+			socket.emit('users:token_auth',e);
 		}
 	}
 	function join_rooms (socket,data) {

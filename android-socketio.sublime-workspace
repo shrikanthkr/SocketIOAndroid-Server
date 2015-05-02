@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"console"
+			],
+			[
 				"phone",
 				"phone_numbers"
 			],
@@ -123,7 +127,23 @@
 			"file": "models/user.js",
 			"settings":
 			{
-				"buffer_size": 2498,
+				"buffer_size": 3407,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/users_rooms.js",
+			"settings":
+			{
+				"buffer_size": 1170,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "configs/router.js",
+			"settings":
+			{
+				"buffer_size": 824,
 				"line_ending": "Unix"
 			}
 		},
@@ -131,23 +151,15 @@
 			"file": "controllers/users.js",
 			"settings":
 			{
-				"buffer_size": 768,
+				"buffer_size": 1181,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "controllers/messages.js",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 762,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/message.js",
-			"settings":
-			{
-				"buffer_size": 705,
+				"buffer_size": 1438,
 				"line_ending": "Unix"
 			}
 		}
@@ -155,17 +167,9 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 243.0,
+		"height": 138.0,
 		"selected_items":
 		[
-			[
-				"commi",
-				"Git: Commit"
-			],
-			[
-				"add",
-				"Git: Quick Add"
-			],
 			[
 				"push",
 				"Git: Push Current Branch"
@@ -175,16 +179,24 @@
 				"Git: Commit"
 			],
 			[
-				"commit",
-				"Git: Commit"
+				"add",
+				"Git: Quick Add"
+			],
+			[
+				"idne",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"inde",
 				"Indentation: Reindent Lines"
 			],
 			[
-				"idne",
-				"Indentation: Reindent Lines"
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"commit",
+				"Git: Commit"
 			],
 			[
 				"comm",
@@ -284,25 +296,27 @@
 	},
 	"expanded_folders":
 	[
-		"/home/shrikanth/node-apps/android-socketio",
-		"/home/shrikanth/node-apps/android-socketio/controllers"
+		"/home/shrikanth/node-apps/android-socketio/controllers",
+		"/home/shrikanth/node-apps/android-socketio/models"
 	],
 	"file_history":
 	[
+		"/home/shrikanth/node-apps/android-socketio/node_modules/socket.io-redis/node_modules/redis/benches/reconnect_test.js",
 		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/models/message.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/users.js",
-		"/home/shrikanth/node-apps/android-socketio/models/room.js",
-		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/index.html",
-		"/home/shrikanth/node-apps/android-socketio/models/user.js",
+		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/env.js",
 		"/home/shrikanth/node-apps/android-socketio/socket.js",
+		"/home/shrikanth/node-apps/android-socketio/controllers/users.js",
+		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
+		"/home/shrikanth/node-apps/android-socketio/models/user.js",
+		"/home/shrikanth/node-apps/android-socketio/controllers/messages.js",
+		"/home/shrikanth/node-apps/android-socketio/models/message.js",
+		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
+		"/home/shrikanth/node-apps/android-socketio/models/room.js",
+		"/home/shrikanth/node-apps/android-socketio/index.html",
 		"/home/shrikanth/node-apps/android-socketio/package.json",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/app/src/main/java/socket/shriku/com/activities/SigninActivity.java",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/SocketIOAndroid.iml",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/settings.gradle",
-		"/home/shrikanth/node-apps/android-socketio/controllers/messages.js",
 		"/home/shrikanth/node-apps/android-socketio/libs/mongo.js",
 		"/home/shrikanth/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/shrikanth/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
@@ -414,9 +428,7 @@
 		"/home/shrikanth/ubuntu_apps/HelloWorld/HelloWorld.pro",
 		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/node_modules/ember-cli/lib/utilities/ember-cli-version.js",
 		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/config/environment.js",
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/package.json",
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/app/templates/application.hbs",
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/app/router.js"
+		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/package.json"
 	],
 	"find":
 	{
@@ -520,7 +532,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -529,15 +541,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2498,
+						"buffer_size": 3407,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1913,
-								1913
+								1396,
+								1396
 							]
 						],
 						"settings":
@@ -546,58 +558,28 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 7.0,
-						"translation.y": 502.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "controllers/users.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 768,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								477,
-								477
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 27.0,
+						"translation.y": 756.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "controllers/messages.js",
+					"buffer": 1,
+					"file": "models/users_rooms.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 762,
+						"buffer_size": 1170,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								357,
-								357
+								0,
+								0
 							]
 						],
 						"settings":
@@ -605,28 +587,28 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "models/message.js",
+					"buffer": 2,
+					"file": "configs/router.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 705,
+						"buffer_size": 824,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								367,
-								367
+								761,
+								761
 							]
 						],
 						"settings":
@@ -634,11 +616,70 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
+						"translation.x": -0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "controllers/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								483,
+								483
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								262
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -703,8 +744,28 @@
 		"selected_items":
 		[
 			[
+				"users",
+				"controllers/users.js"
+			],
+			[
 				"ro",
 				"configs/router.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"so",
+				"socket.js"
+			],
+			[
+				"router",
+				"configs/router.js"
+			],
+			[
+				"user",
+				"models/user.js"
 			],
 			[
 				"mess",
@@ -717,14 +778,6 @@
 			[
 				"rou",
 				"configs/router.js"
-			],
-			[
-				"so",
-				"socket.js"
-			],
-			[
-				"users",
-				"controllers/users.js"
 			],
 			[
 				"user_roo",
@@ -751,20 +804,12 @@
 				"index.html"
 			],
 			[
-				"user",
-				"models/user.js"
-			],
-			[
 				"sign",
 				"app/src/main/java/socket/shriku/com/activities/SigninActivity.java"
 			],
 			[
 				"pa",
 				"package.json"
-			],
-			[
-				"router",
-				"configs/router.js"
 			],
 			[
 				"works",
@@ -777,10 +822,6 @@
 			[
 				"project",
 				"devsmartlib/project.properties"
-			],
-			[
-				"index",
-				"index.html"
 			],
 			[
 				"agen",
