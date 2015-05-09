@@ -1,74 +1,8 @@
-DB.createCollection('rooms', {w:1}, function(err, collection) {
-	if(!err){
-		console.log('rooms');
-	}else{
-		console.log(err);
-	}
+var RoomSchema = new Schema({
+	name: String,
+  members: [ { type:Schema.ObjectId, ref:"User", childPath:"rooms" }],
+  owner: { type:Schema.ObjectId, ref:"User", childPath:"room" }
+ 
 });
-Room = (function(){
-	var collection = DB.collection('rooms');
+Room =  Mongoose.model('Room', RoomSchema);
 
-	function create(params,callback){
-		console.log(params);
-		collection.insert(params,{w:1},function(err,room){
-			UsersRooms.create({user_id: params.user_id, room_id: room.ops[0]._id},function(err,item){
-				callback(err,room);
-			});
-		});
-	}
-
-	function add (params,callback) {
-		findOne(params.room_id,function(err,room){
-			if(err){
-				console.log(err);
-			}
-				else{
-					console.log(room);
-					UsersRooms.add({user_id: params.user_id, room_id: params.room_id},function(err,item){
-						callback(err,room);
-					});
-				}
-
-			});
-		
-	}
-	function findOne(room_id,callback){
-		console.log('finding Room'+room_id);
-		var o_id = new ObjectID(room_id);
-		collection.findOne({_id: o_id},callback );
-	}
-	function findOneByName(name,callback){
-		collection.findOne({name: name},callback );
-	}
-	function findOneName(names,callback){
-		collection.find({
-			name: {$in :names}
-		} ).toArray(function(err,item){
-			callback(err,item);
-		});
-	}
-
-	function findAll(rooms,callback){
-		collection.find({
-			_id: {$in :rooms}
-		} ).toArray(function(err,item){
-			callback(err,item);
-		});
-	}
-		function findAllByName(room_names,callback){
-		collection.find({
-			name: {$in :room_names}
-		} ).toArray(function(err,item){
-			callback(err,item);
-		});
-	}
-	return{
-		create: create,
-		add: add,
-		findOne: findOne,
-		findAll: findAll,
-		findOneByName: findOneByName,
-		findAllByName: findAllByName
-	}
-	
-})();

@@ -35,13 +35,11 @@ Mongo = require('mongodb');
 MongoClient = Mongo.MongoClient;
 ObjectID = require('mongodb').ObjectID
 Observer = require("node-observer");
-
-
-Observer.subscribe(this, "db_init", function(who, data) {
-  console.log('Initiating Models');
-  DB = data;
-  Models = require('require-all')(__dirname + '/models');
-});
+Mongoose = require('mongoose');
+Schema = Mongoose.Schema;
+Relationship = require("mongoose-relationship");
+console.log('Initiating Models');
+Models = require('require-all')(__dirname + '/models');
 Bcrypt = require('bcryptjs');
 Libs = require('require-all')(__dirname + '/libs');
 
