@@ -37,9 +37,14 @@ module.exports = (function(){
 
 	}
 	function create (socket,params) {
-		User.create(params,function (err,result) {
-			socket.client.user = result;
-			socket.emit('user:create',result);
+		var user  = new User(params);
+		user.save(function (err) {
+			if(err)socket.emit('user:create',err);
+			else{
+				socket.client.user = user;
+				socket.emit('user:create',user);
+			}
+			
 		});
 	}
 	return{

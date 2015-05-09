@@ -39,6 +39,7 @@ Mongoose = require('mongoose');
 Schema = Mongoose.Schema;
 Relationship = require("mongoose-relationship");
 console.log('Initiating Models');
+Helpers = require('require-all')(__dirname + '/helpers');
 Models = require('require-all')(__dirname + '/models');
 Bcrypt = require('bcryptjs');
 Libs = require('require-all')(__dirname + '/libs');
@@ -81,4 +82,3 @@ Io.on('connection', function(socket){
 server.listen(port,function(){
   console.log("Server on:"+ port)
 });
-
