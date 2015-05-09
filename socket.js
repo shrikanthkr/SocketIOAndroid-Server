@@ -41,6 +41,12 @@ Relationship = require("mongoose-relationship");
 console.log('Initiating Models');
 Helpers = require('require-all')(__dirname + '/helpers');
 Models = require('require-all')(__dirname + '/models');
+/*Mongoose.connection.collections['users'].drop( function(err) {
+    console.log('users collection dropped');
+  });
+  Mongoose.connection.collections['rooms'].drop( function(err) {
+    console.log('rooms collection dropped');
+  });*/
 Bcrypt = require('bcryptjs');
 Libs = require('require-all')(__dirname + '/libs');
 

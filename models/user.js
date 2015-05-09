@@ -10,8 +10,7 @@ var UserSchema = new Schema({
 	},
 	password:  String, 
 	display_name: String,
-	rooms: [{ type:Schema.ObjectId, ref:"Room" }],
-	room: [{ type:Schema.ObjectId, ref:"Room" }]
+	rooms: [{ type:Schema.ObjectId, ref:"Room" }]
 
 });
 
@@ -22,7 +21,6 @@ User.schema.path('user_name').validate(function (value) {
 }, 'Invalid user name');
 
 User.schema.path('phone_number').validate(function (value) {
-	console.log(/^\d{10}$/.test(value));
 	return /^\d{10}$/.test(value);
 }, 'Invalid phone number');
 
