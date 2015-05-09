@@ -1,5 +1,5 @@
 Message = (function(){
-	var collection = DB.collection('messages');
+	/*var collection = DB.collection('messages');
 	function create(params,callback){
 		console.log(params);
 		
@@ -26,5 +26,5 @@ Message = (function(){
 	return{
 		find: find,
 		create: create
-	}
+	}*/
 })();
