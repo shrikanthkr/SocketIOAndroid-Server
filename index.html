@@ -8,17 +8,20 @@
 <body>
 	<h1>Socket io is running</h1>
 	<script>
-		var socket = io.connect('/');
+		var socket = io.connect();
 		/*socket.emit('user:create',{
 			user_name: 'v',
 			password: 'admin123'
 		});
-		
+			socket.emit('rooms:contacts',{
+				phone_numbers: ['1234567890']
+			});
 		
 		setTimeout(function(){
-			socket.emit('user:create',{
+			socket.emit('user:create',JSON,stringify({
 				user_name: 'shrikanth',
-				password: 'admin123'
+				password: 'admin123',
+				phone_number: '9500195123')
 			});
 			socket.off('user:create').on('user:create', function (data) {
 				console.log(data);
@@ -52,7 +55,15 @@
 					console.log(data);
 				});
 			});
-
+			socket.off('rooms:contacts').on('rooms:contacts', function (data) {
+					console.log(data);
+				});
+			phone_string = JSON.stringify( ['9632587410','9500195123']);
+			socket.emit('rooms:contacts',phone_string);
+			socket.emit('users:token_auth',{token: ''});
+			socket.off('users:token_auth').on('users:token_auth', function (data) {
+					console.log(data);
+				});
 		});*/
 
 	</script>

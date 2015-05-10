@@ -31,8 +31,23 @@ module.exports = (function(){
 			controller: 'messages'
 		},
 		{
+			url: 'messages:index',
+			action: 'index',
+			controller: 'messages'
+		},
+		{
 			url: 'user:create',
 			action: 'create',
+			controller: 'users'
+		},
+		{
+			url: 'rooms:contacts',
+			action: 'contacts',
+			controller: 'rooms'
+		},
+		{
+			url: 'users:token_auth',
+			action: 'token_auth',
 			controller: 'users'
 		}
 	]
