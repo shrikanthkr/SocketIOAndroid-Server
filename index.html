@@ -60,7 +60,10 @@
 				});
 			phone_string = JSON.stringify( ['9632587410','9500195123']);
 			socket.emit('rooms:contacts',phone_string);
-
+			socket.emit('users:token_auth',{token: ''});
+			socket.off('users:token_auth').on('users:token_auth', function (data) {
+					console.log(data);
+				});
 		});*/
 
 	</script>

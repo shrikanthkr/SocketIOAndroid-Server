@@ -124,40 +124,18 @@
 	"buffers":
 	[
 		{
-<<<<<<< HEAD
+			"file": "models/room.js",
+			"settings":
+			{
+				"buffer_size": 282,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "models/user.js",
 			"settings":
 			{
-				"buffer_size": 3407,
-=======
-			"file": "socket.js",
-			"settings":
-			{
-				"buffer_size": 2517,
->>>>>>> start mongoose
-				"line_ending": "Unix"
-			}
-		},
-		{
-<<<<<<< HEAD
-			"file": "models/users_rooms.js",
-			"settings":
-			{
-				"buffer_size": 1170,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "configs/router.js",
-			"settings":
-			{
-				"buffer_size": 824,
-=======
-			"file": "controllers/rooms.js",
-			"settings":
-			{
-				"buffer_size": 1151,
->>>>>>> start mongoose
+				"buffer_size": 700,
 				"line_ending": "Unix"
 			}
 		},
@@ -165,26 +143,31 @@
 			"file": "controllers/users.js",
 			"settings":
 			{
-<<<<<<< HEAD
-				"buffer_size": 1181,
-=======
-				"buffer_size": 1205,
->>>>>>> start mongoose
+				"buffer_size": 1696,
 				"line_ending": "Unix"
 			}
 		},
 		{
-<<<<<<< HEAD
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1438,
-=======
-			"file": "package.json",
+				"buffer_size": 1500,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "socket.js",
 			"settings":
 			{
-				"buffer_size": 832,
->>>>>>> start mongoose
+				"buffer_size": 2834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libs/mongo.js",
+			"settings":
+			{
+				"buffer_size": 392,
 				"line_ending": "Unix"
 			}
 		}
@@ -192,15 +175,37 @@
 	"build_system": "",
 	"command_palette":
 	{
-<<<<<<< HEAD
-		"height": 138.0,
+		"height": 327.0,
 		"selected_items":
 		[
 			[
-=======
-		"height": 285.0,
-		"selected_items":
-		[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Quick Add"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comit",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Quick Add"
+			],
+			[
+				"idne",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -210,36 +215,11 @@
 				"Preferences: Browse Packages"
 			],
 			[
->>>>>>> start mongoose
-				"push",
-				"Git: Push Current Branch"
-			],
-			[
-				"comit",
-				"Git: Commit"
-			],
-			[
-				"add",
-				"Git: Quick Add"
-			],
-			[
-				"idne",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"inde",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"commi",
 				"Git: Commit"
 			],
 			[
 				"commit",
-				"Git: Commit"
-			],
-			[
-				"comm",
 				"Git: Commit"
 			],
 			[
@@ -253,10 +233,6 @@
 			[
 				"INDE",
 				"Indentation: Reindent Lines"
-			],
-			[
-				"ad",
-				"Git: Quick Add"
 			],
 			[
 				"comimt",
@@ -295,13 +271,6 @@
 				"File: Open In Browser - Production Server"
 			],
 			[
-<<<<<<< HEAD
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-=======
->>>>>>> start mongoose
 				"inden",
 				"Indentation: Reindent Lines"
 			],
@@ -339,53 +308,33 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
+		"/home/shrikanth/node-apps/android-socketio",
+		"/home/shrikanth/node-apps/android-socketio/configs",
 		"/home/shrikanth/node-apps/android-socketio/controllers",
+		"/home/shrikanth/node-apps/android-socketio/libs",
 		"/home/shrikanth/node-apps/android-socketio/models"
 	],
 	"file_history":
 	[
-		"/home/shrikanth/node-apps/android-socketio/node_modules/socket.io-redis/node_modules/redis/benches/reconnect_test.js",
-		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
-		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/env.js",
-		"/home/shrikanth/node-apps/android-socketio/socket.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/users.js",
-		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/models/user.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/messages.js",
-		"/home/shrikanth/node-apps/android-socketio/models/message.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/models/room.js",
 		"/home/shrikanth/node-apps/android-socketio/index.html",
-=======
-		"/home/shrikanth/node-apps/android-socketio",
-		"/home/shrikanth/node-apps/android-socketio/controllers"
-	],
-	"file_history":
-	[
-		"/home/shrikanth/node-apps/android-socketio/libs/mongo.js",
-		"/home/shrikanth/node-apps/android-socketio/node_modules/lodash/utility/methodOf.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/messages.js",
 		"/home/shrikanth/node-apps/android-socketio/controllers/users.js",
-		"/home/shrikanth/node-apps/android-socketio/models/user.js",
-		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
-		"/home/shrikanth/node-apps/android-socketio/models/message.js",
-		"/home/shrikanth/node-apps/android-socketio/index.html",
 		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/node_modules/socket.io-redis/node_modules/redis/benches/reconnect_test.js",
-		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/env.js",
 		"/home/shrikanth/node-apps/android-socketio/socket.js",
-		"/home/shrikanth/node-apps/android-socketio/models/room.js",
->>>>>>> start mongoose
 		"/home/shrikanth/node-apps/android-socketio/package.json",
+		"/home/shrikanth/node-apps/android-socketio/helpers/common_validations.js",
+		"/home/shrikanth/node-apps/android-socketio/libs/mongo.js",
+		"/home/shrikanth/node-apps/android-socketio/controllers/messages.js",
+		"/home/shrikanth/node-apps/android-socketio/models/message.js",
+		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
+		"/home/shrikanth/node-apps/android-socketio/models/user.js",
+		"/home/shrikanth/node-apps/android-socketio/models/room.js",
+		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
+		"/home/shrikanth/node-apps/android-socketio/node_modules/lodash/utility/methodOf.js",
+		"/home/shrikanth/node-apps/android-socketio/node_modules/socket.io-redis/node_modules/redis/benches/reconnect_test.js",
+		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/env.js",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/app/src/main/java/socket/shriku/com/activities/SigninActivity.java",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/SocketIOAndroid.iml",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/settings.gradle",
-<<<<<<< HEAD
-		"/home/shrikanth/node-apps/android-socketio/libs/mongo.js",
-=======
->>>>>>> start mongoose
 		"/home/shrikanth/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/shrikanth/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/lib/Interactor/PushInteractor.js",
@@ -494,13 +443,7 @@
 		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/node_modules/ember-cli/lib/commands/install-npm.js",
 		"/home/shrikanth/ubuntu_apps/HelloWorld/README.md",
 		"/home/shrikanth/ubuntu_apps/HelloWorld/HelloWorld.pro",
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/node_modules/ember-cli/lib/utilities/ember-cli-version.js",
-<<<<<<< HEAD
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/config/environment.js",
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/package.json"
-=======
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/config/environment.js"
->>>>>>> start mongoose
+		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/node_modules/ember-cli/lib/utilities/ember-cli-version.js"
 	],
 	"find":
 	{
@@ -604,251 +547,185 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
-			"selected": 0,
-=======
-			"selected": 1,
->>>>>>> start mongoose
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-<<<<<<< HEAD
-					"file": "models/user.js",
+					"file": "models/room.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3407,
-=======
-					"file": "socket.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2517,
->>>>>>> start mongoose
+						"buffer_size": 282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								1396,
-								1396
-=======
-								1460,
-								1460
->>>>>>> start mongoose
+								160,
+								160
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
 							"auto_complete": false,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 27.0,
-						"translation.y": 756.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-=======
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
 						"translation.x": 0.0,
-						"translation.y": 702.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
->>>>>>> start mongoose
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-<<<<<<< HEAD
-					"file": "models/users_rooms.js",
+					"file": "models/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1170,
-=======
-					"file": "controllers/rooms.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1151,
->>>>>>> start mongoose
+						"buffer_size": 700,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								0,
-								0
-=======
-								564,
-								564
->>>>>>> start mongoose
+								317,
+								317
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-=======
 							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
->>>>>>> start mongoose
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-<<<<<<< HEAD
-					"file": "configs/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								761,
-								761
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-=======
->>>>>>> start mongoose
-					"file": "controllers/users.js",
-					"semi_transient": false,
-					"settings":
-					{
-<<<<<<< HEAD
-						"buffer_size": 1181,
-=======
-						"buffer_size": 1205,
->>>>>>> start mongoose
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								483,
-								483
-=======
-								0,
-								0
->>>>>>> start mongoose
-							]
-						],
-						"settings":
-						{
-<<<<<<< HEAD
-							"auto_complete": false,
-=======
->>>>>>> start mongoose
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 162.0,
-=======
-						"translation.y": 0.0,
->>>>>>> start mongoose
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-<<<<<<< HEAD
-					"buffer": 4,
-					"file": "index.html",
+					"buffer": 2,
+					"file": "controllers/users.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1438,
-=======
-					"buffer": 3,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 832,
->>>>>>> start mongoose
+						"buffer_size": 1696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								262,
-								262
-=======
-								0,
-								0
->>>>>>> start mongoose
+								1314,
+								1314
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								504,
+								504
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
-=======
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
->>>>>>> start mongoose
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-<<<<<<< HEAD
 					"stack_index": 4,
-=======
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "socket.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1722,
+								1722
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 447.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "libs/mongo.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 3,
->>>>>>> start mongoose
 					"type": "text"
 				}
 			]
@@ -913,8 +790,18 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
-=======
+				"inde",
+				"index.html"
+			],
+			[
+				"room",
+				"models/room.js"
+			],
+			[
+				"user",
+				"models/user.js"
+			],
+			[
 				"mon",
 				"libs/mongo.js"
 			],
@@ -927,7 +814,6 @@
 				"models/message.js"
 			],
 			[
->>>>>>> start mongoose
 				"users",
 				"controllers/users.js"
 			],
@@ -946,10 +832,6 @@
 			[
 				"router",
 				"configs/router.js"
-			],
-			[
-				"user",
-				"models/user.js"
 			],
 			[
 				"mess",
@@ -976,16 +858,8 @@
 				"configs/router.js"
 			],
 			[
-				"room",
-				"models/room.js"
-			],
-			[
 				"rooms",
 				"controllers/rooms.js"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"sign",
@@ -1028,13 +902,6 @@
 				"config/routes.rb"
 			],
 			[
-<<<<<<< HEAD
-				"message",
-				"app/views/layouts/_messages.html.erb"
-			],
-			[
-=======
->>>>>>> start mongoose
 				"naviga",
 				"app/views/layouts/_navigation.html.erb"
 			],

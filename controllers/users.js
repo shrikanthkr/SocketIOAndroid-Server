@@ -1,31 +1,38 @@
 module.exports = (function(){
 	function auth (socket,params) {
-			console.log('authenticating');
-			User.findOneAndUpdate(
-				{ user_name: params.user_name },
-				{ $set: { token:Randtoken.generate(16) } },{})
-			.populate('rooms') 
-			.exec(function (err, user) {
-				if (err) return socket.emit('auth',err)
-				else if(user.user_name && Bcrypt.compareSync(params.password, user.password)){
+		console.log('authenticating');
+		User.findOneAndUpdate(
+			{ user_name: params.user_name },
+			{ $set: { token:Randtoken.generate(16) } },{})
+		.populate('rooms') 
+		.exec(function (err, user) {
+			if (err) return socket.emit('auth',err)
+				else if(user &&  user.user_name && Bcrypt.compareSync(params.password, user.password)){
 					join_rooms(socket,user.rooms);
 					socket.emit('auth',user);
 				}else{
-						socket.emit('auth',err);
+					socket.emit('auth',err);
 				}
 
 			});
 	}
 	function token_auth (socket,params) {
 		try{
-			User.find_by_token(params,function(data){
-				socket.client.user = data;
-				UsersRooms.getRooms([socket.client.user._id],function(err,user_rooms_ids){
-					Room.findAll(user_rooms_ids,function(err,rooms){
-						join_rooms(socket,rooms);
-					});
-				});
-				socket.emit('users:token_auth',data);
+			User.findOneAndUpdate(
+				{ token: params.token },
+				{ $set: { token:Randtoken.generate(16) } },{})
+			.populate('rooms') 
+			.exec(function (err, user) {
+				console.log(user);
+				if (err) {
+					return socket.emit('users:token_auth',err);
+				}else if(user && user.user_name){
+					join_rooms(socket,user.rooms);
+					socket.emit('users:token_auth',user);
+				}else{
+					socket.emit('users:token_auth',err);
+				}
+
 			});
 		}catch(e){
 			socket.emit('users:token_auth',e);
