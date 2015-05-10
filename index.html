@@ -54,6 +54,7 @@
 				socket.off('messages:new').on('messages:new', function (data) {
 					console.log(data);
 				});
+					socket.emit('messages:new',{to: 'ajay', message: 'Hi'});
 			});
 			socket.off('rooms:contacts').on('rooms:contacts', function (data) {
 					console.log(data);

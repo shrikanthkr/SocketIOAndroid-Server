@@ -11,8 +11,13 @@ module.exports = (function(){
 				message.save(function (err) {
 					if (err) socket.emit('messages:new',err);
 					else{
-						socket.emit('messages:new',message);
-						Io.to(params.to).emit('messages:new',message);
+						message.populate('room', '-members -messages' ,function(err,room){
+							if (err) socket.emit('messages:new',err);
+							else{
+								socket.emit('messages:new',message);
+								Io.to(params.to).emit('messages:new',message);
+							}
+						});
 					}
 				});
 			}
