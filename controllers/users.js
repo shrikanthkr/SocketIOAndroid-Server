@@ -5,7 +5,7 @@ module.exports = (function(){
 			{ user_name: params.user_name },
 			{ $set: { token:Randtoken.generate(16) } },{})
 		.populate('rooms','-members -messages') 
-		.exec(function (err, user) {
+		.exec().then(function (err, user) {
 			if (err) return socket.emit('auth',err)
 				else if(user &&  user.user_name && Bcrypt.compareSync(params.password, user.password)){
 					socket.client.user = user;
@@ -24,7 +24,7 @@ module.exports = (function(){
 				{ $set: { token:Randtoken.generate(16) } },{})
 			.populate('rooms','-members -messages') 
 			.select('-password')
-			.exec(function (err, user) {
+			.exec().then(function (err, user) {
 				if (err) {
 					return socket.emit('users:token_auth',err);
 				}else if(user && user.user_name){
