@@ -33,7 +33,7 @@ module.exports = (function(){
 		var final_room_ids = [];
 		params.push(socket.client.user.phone_number);
 		Room.find()
-		.populate( 'members', null, { phone_number: { $in: params} } )
+		.populate( 'members', '-rooms', { phone_number: { $in: params} } )
 		.exec(function(err,rooms){
 			socket.emit('rooms:contacts',rooms);
 		});
