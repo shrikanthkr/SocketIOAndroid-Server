@@ -124,26 +124,18 @@
 	"buffers":
 	[
 		{
+			"file": "models/room.js",
+			"settings":
+			{
+				"buffer_size": 282,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "models/user.js",
 			"settings":
 			{
-				"buffer_size": 3407,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/users_rooms.js",
-			"settings":
-			{
-				"buffer_size": 1170,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "configs/router.js",
-			"settings":
-			{
-				"buffer_size": 824,
+				"buffer_size": 700,
 				"line_ending": "Unix"
 			}
 		},
@@ -151,7 +143,7 @@
 			"file": "controllers/users.js",
 			"settings":
 			{
-				"buffer_size": 1181,
+				"buffer_size": 1696,
 				"line_ending": "Unix"
 			}
 		},
@@ -159,7 +151,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1438,
+				"buffer_size": 1500,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "socket.js",
+			"settings":
+			{
+				"buffer_size": 2834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libs/mongo.js",
+			"settings":
+			{
+				"buffer_size": 392,
 				"line_ending": "Unix"
 			}
 		}
@@ -167,15 +175,11 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 138.0,
+		"height": 327.0,
 		"selected_items":
 		[
 			[
-				"push",
-				"Git: Push Current Branch"
-			],
-			[
-				"comit",
+				"comm",
 				"Git: Commit"
 			],
 			[
@@ -183,12 +187,32 @@
 				"Git: Quick Add"
 			],
 			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comit",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Quick Add"
+			],
+			[
 				"idne",
 				"Indentation: Reindent Lines"
 			],
 			[
-				"inde",
-				"Indentation: Reindent Lines"
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"waka",
+				"Preferences: Browse Packages"
 			],
 			[
 				"commi",
@@ -196,10 +220,6 @@
 			],
 			[
 				"commit",
-				"Git: Commit"
-			],
-			[
-				"comm",
 				"Git: Commit"
 			],
 			[
@@ -213,10 +233,6 @@
 			[
 				"INDE",
 				"Indentation: Reindent Lines"
-			],
-			[
-				"ad",
-				"Git: Quick Add"
 			],
 			[
 				"comimt",
@@ -253,10 +269,6 @@
 			[
 				"inbde",
 				"File: Open In Browser - Production Server"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"inden",
@@ -296,28 +308,33 @@
 	},
 	"expanded_folders":
 	[
+		"/home/shrikanth/node-apps/android-socketio",
+		"/home/shrikanth/node-apps/android-socketio/configs",
 		"/home/shrikanth/node-apps/android-socketio/controllers",
+		"/home/shrikanth/node-apps/android-socketio/libs",
 		"/home/shrikanth/node-apps/android-socketio/models"
 	],
 	"file_history":
 	[
-		"/home/shrikanth/node-apps/android-socketio/node_modules/socket.io-redis/node_modules/redis/benches/reconnect_test.js",
-		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
-		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/env.js",
-		"/home/shrikanth/node-apps/android-socketio/socket.js",
+		"/home/shrikanth/node-apps/android-socketio/index.html",
 		"/home/shrikanth/node-apps/android-socketio/controllers/users.js",
-		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/models/user.js",
+		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
+		"/home/shrikanth/node-apps/android-socketio/socket.js",
+		"/home/shrikanth/node-apps/android-socketio/package.json",
+		"/home/shrikanth/node-apps/android-socketio/helpers/common_validations.js",
+		"/home/shrikanth/node-apps/android-socketio/libs/mongo.js",
 		"/home/shrikanth/node-apps/android-socketio/controllers/messages.js",
 		"/home/shrikanth/node-apps/android-socketio/models/message.js",
-		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
+		"/home/shrikanth/node-apps/android-socketio/models/users_rooms.js",
+		"/home/shrikanth/node-apps/android-socketio/models/user.js",
 		"/home/shrikanth/node-apps/android-socketio/models/room.js",
-		"/home/shrikanth/node-apps/android-socketio/index.html",
-		"/home/shrikanth/node-apps/android-socketio/package.json",
+		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
+		"/home/shrikanth/node-apps/android-socketio/node_modules/lodash/utility/methodOf.js",
+		"/home/shrikanth/node-apps/android-socketio/node_modules/socket.io-redis/node_modules/redis/benches/reconnect_test.js",
+		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/env.js",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/app/src/main/java/socket/shriku/com/activities/SigninActivity.java",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/SocketIOAndroid.iml",
 		"/home/shrikanth/AndroidStudioProjects/SocketAndroid/settings.gradle",
-		"/home/shrikanth/node-apps/android-socketio/libs/mongo.js",
 		"/home/shrikanth/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/shrikanth/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/shrikanth/node-apps/android-socketio/node_modules/pm2/lib/Interactor/PushInteractor.js",
@@ -426,9 +443,7 @@
 		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/node_modules/ember-cli/lib/commands/install-npm.js",
 		"/home/shrikanth/ubuntu_apps/HelloWorld/README.md",
 		"/home/shrikanth/ubuntu_apps/HelloWorld/HelloWorld.pro",
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/node_modules/ember-cli/lib/utilities/ember-cli-version.js",
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/config/environment.js",
-		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/package.json"
+		"/home/shrikanth/ubuntu_apps/HelloWorld/html/app/node_modules/ember-cli/lib/utilities/ember-cli-version.js"
 	],
 	"find":
 	{
@@ -532,112 +547,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "models/user.js",
+					"file": "models/room.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3407,
+						"buffer_size": 282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1396,
-								1396
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 27.0,
-						"translation.y": 756.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "models/users_rooms.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1170,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "configs/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								761,
-								761
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "controllers/users.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1181,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								483,
-								483
+								160,
+								160
 							]
 						],
 						"settings":
@@ -647,27 +574,86 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 162.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "index.html",
+					"buffer": 1,
+					"file": "models/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1438,
+						"buffer_size": 700,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								262,
-								262
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "controllers/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1314,
+								1314
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								504,
+								504
 							]
 						],
 						"settings":
@@ -680,6 +666,66 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "socket.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1722,
+								1722
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 447.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "libs/mongo.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -744,6 +790,30 @@
 		"selected_items":
 		[
 			[
+				"inde",
+				"index.html"
+			],
+			[
+				"room",
+				"models/room.js"
+			],
+			[
+				"user",
+				"models/user.js"
+			],
+			[
+				"mon",
+				"libs/mongo.js"
+			],
+			[
+				"messages",
+				"controllers/messages.js"
+			],
+			[
+				"message",
+				"models/message.js"
+			],
+			[
 				"users",
 				"controllers/users.js"
 			],
@@ -762,10 +832,6 @@
 			[
 				"router",
 				"configs/router.js"
-			],
-			[
-				"user",
-				"models/user.js"
 			],
 			[
 				"mess",
@@ -792,16 +858,8 @@
 				"configs/router.js"
 			],
 			[
-				"room",
-				"models/room.js"
-			],
-			[
 				"rooms",
 				"controllers/rooms.js"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"sign",
@@ -842,10 +900,6 @@
 			[
 				"roter",
 				"config/routes.rb"
-			],
-			[
-				"message",
-				"app/views/layouts/_messages.html.erb"
 			],
 			[
 				"naviga",

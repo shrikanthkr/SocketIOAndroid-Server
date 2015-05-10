@@ -35,13 +35,18 @@ Mongo = require('mongodb');
 MongoClient = Mongo.MongoClient;
 ObjectID = require('mongodb').ObjectID
 Observer = require("node-observer");
-
-
-Observer.subscribe(this, "db_init", function(who, data) {
-  console.log('Initiating Models');
-  DB = data;
-  Models = require('require-all')(__dirname + '/models');
-});
+Mongoose = require('mongoose');
+Schema = Mongoose.Schema;
+Relationship = require("mongoose-relationship");
+console.log('Initiating Models');
+Helpers = require('require-all')(__dirname + '/helpers');
+Models = require('require-all')(__dirname + '/models');
+/*Mongoose.connection.collections['users'].drop( function(err) {
+    console.log('users collection dropped');
+  });
+  Mongoose.connection.collections['rooms'].drop( function(err) {
+    console.log('rooms collection dropped');
+  });*/
 Bcrypt = require('bcryptjs');
 Libs = require('require-all')(__dirname + '/libs');
 
@@ -83,4 +88,3 @@ Io.on('connection', function(socket){
 server.listen(port,function(){
   console.log("Server on:"+ port)
 });
-
