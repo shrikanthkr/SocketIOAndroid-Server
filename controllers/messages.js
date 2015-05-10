@@ -27,7 +27,7 @@ module.exports = (function(){
 		console.log('Message: '+ params.room_name);
 		params.user_name =  socket.client.user.user_name;
 		Room.findOne({name: params.room_name})
-		.populate('messages')
+		.populate('messages','-room')
 		.select('messages')
 		.exec(function (err,rooms) {
 			if (err) socket.emit('messages:index',err);
