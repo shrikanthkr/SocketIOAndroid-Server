@@ -1,30 +1,11 @@
-Message = (function(){
-	/*var collection = DB.collection('messages');
-	function create(params,callback){
-		console.log(params);
-		
-		collection.insert(params,{w:1},function(err,message){
-			callback(err,message.ops[0]);
-		});
-	}
-
-	function find(params,callback){
-		console.log('finding message by room name:'+params.room_name);
-		collection.find(
-		{
-			$or :[{
-				to: params.room_name, sender: params.user_name,
-			},
-			{
-				to: params.user_name, sender: params.room_name
-				
-			}]	
-		}
-
-		).toArray(callback);
-	}
-	return{
-		find: find,
-		create: create
-	}*/
-})();
+var MessageSchema = new Schema({
+	message:  {type: String,  
+		validate: [Validations.validatePresenceOf, "Enter a valid message"], 
+		required: true
+	},
+	room: { type:Schema.ObjectId, ref:"Room", childPath:"messages" },
+	to:  String,
+	from:  String
+});
+MessageSchema.plugin(Relationship, { relationshipPathName:'room' });
+Message =  Mongoose.model('Message', MessageSchema);

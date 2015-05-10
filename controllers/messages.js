@@ -1,29 +1,34 @@
 module.exports = (function(){
 	function new_message (socket,params) {
 		console.log('Message: '+ params.to);
-		params.sender = socket.client.user.user_name;
-		Message.create(params,function(err,item){
-			if(err){
-				socket.emit('messages:new',err);
-
-			}else{
-				socket.emit('messages:new',item);
-				Io.to(params.to).emit('messages:new',item);
+		Room.findOne({name:params.to}).exec(function (err,room) {
+			if (err) socket.emit('messages:new',err);
+			else{
+				
+				params.from = socket.client.user.user_name;
+				params.room =room._id;
+				var message = new Message(params);
+				message.save(function (err) {
+					if (err) socket.emit('messages:new',err);
+					else{
+						socket.emit('messages:new',message);
+						Io.to(params.to).emit('messages:new',message);
+					}
+				});
 			}
 		});
 	}
 	function index(socket,params) {
 		console.log('Message: '+ params.room_name);
 		params.user_name =  socket.client.user.user_name;
-		Message.find(params,function(err,item){
-			if (err) {
-				console.log(err);
-				socket.emit('messages:index',err);
-			} else{
-				console.log(item);
-				socket.emit('messages:index',item);
-			};
-			
+		Room.findOne({name: params.room_name})
+		.populate('messages')
+		.select('messages')
+		.exec(function (err,rooms) {
+			if (err) socket.emit('messages:index',err);
+			else{
+				socket.emit('messages:index',rooms.messages);
+			}
 		});
 	}
 	return{
