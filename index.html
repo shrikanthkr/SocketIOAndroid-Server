@@ -18,9 +18,10 @@
 			});
 		
 		setTimeout(function(){
-			socket.emit('user:create',{
+			socket.emit('user:create',JSON,stringify({
 				user_name: 'shrikanth',
-				password: 'admin123'
+				password: 'admin123',
+				phone_number: '9500195123')
 			});
 			socket.off('user:create').on('user:create', function (data) {
 				console.log(data);
@@ -57,7 +58,7 @@
 			socket.off('rooms:contacts').on('rooms:contacts', function (data) {
 					console.log(data);
 				});
-			phone_string = JSON.stringify( ['9500195123']);
+			phone_string = JSON.stringify( ['9632587410','9500195123']);
 			socket.emit('rooms:contacts',phone_string);
 
 		});*/

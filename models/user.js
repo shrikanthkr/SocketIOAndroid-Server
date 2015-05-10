@@ -8,6 +8,7 @@ var UserSchema = new Schema({
 		required: true,
 		index: {unique: true} 
 	},
+	token: String,
 	password:  String, 
 	display_name: String,
 	rooms: [{ type:Schema.ObjectId, ref:"Room" }]

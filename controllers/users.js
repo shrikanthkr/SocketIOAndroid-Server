@@ -1,7 +1,9 @@
 module.exports = (function(){
 	function auth (socket,params) {
 			console.log('authenticating');
-			User.findOne({ user_name: params.user_name })
+			User.findOneAndUpdate(
+				{ user_name: params.user_name },
+				{ $set: { token:Randtoken.generate(16) } },{})
 			.populate('rooms') 
 			.exec(function (err, user) {
 				if (err) return socket.emit('auth',err)
