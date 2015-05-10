@@ -4,7 +4,7 @@ module.exports = (function(){
 		User.findOneAndUpdate(
 			{ user_name: params.user_name },
 			{ $set: { token:Randtoken.generate(16) } },{})
-		.populate('rooms') 
+		.populate('rooms','-members -messages') 
 		.exec(function (err, user) {
 			if (err) return socket.emit('auth',err)
 				else if(user &&  user.user_name && Bcrypt.compareSync(params.password, user.password)){
@@ -22,7 +22,7 @@ module.exports = (function(){
 			User.findOneAndUpdate(
 				{ token: params.token },
 				{ $set: { token:Randtoken.generate(16) } },{})
-			.populate('rooms') 
+			.populate('rooms','-members -messages') 
 			.select('-password')
 			.exec(function (err, user) {
 				if (err) {
