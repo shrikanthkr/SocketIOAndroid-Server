@@ -26,6 +26,9 @@ module.exports = (function(){
 				.populate('rooms','-members -messages') 
 				.select('-password')
 				.exec(function (err, user) {
+					if(!user){
+						socket.emit('users:token_auth',{error: 'Invalid Auth'}});
+					}
 					user.token = Randtoken.generate(16);
 					user.save(function (err, user) {
 						if (err) {
