@@ -27,7 +27,7 @@ module.exports = (function(){
 				.select('-password')
 				.exec(function (err, user) {
 					if(!user){
-						socket.emit('users:token_auth',{error: 'Invalid Auth'}});
+						socket.emit('users:token_auth',{error: 'Invalid Auth'});
 					}
 					user.token = Randtoken.generate(16);
 					user.save(function (err, user) {
