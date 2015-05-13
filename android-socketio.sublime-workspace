@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"po",
+				"phone_number"
+			],
+			[
 				"messaeg",
 				"messages"
 			],
@@ -139,7 +143,7 @@
 			"file": "controllers/users.js",
 			"settings":
 			{
-				"buffer_size": 1936,
+				"buffer_size": 2053,
 				"line_ending": "Unix"
 			}
 		},
@@ -147,7 +151,7 @@
 			"file": "controllers/messages.js",
 			"settings":
 			{
-				"buffer_size": 988,
+				"buffer_size": 1154,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,15 +167,7 @@
 			"file": "controllers/rooms.js",
 			"settings":
 			{
-				"buffer_size": 958,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/message.js",
-			"settings":
-			{
-				"buffer_size": 375,
+				"buffer_size": 983,
 				"line_ending": "Unix"
 			}
 		},
@@ -179,15 +175,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1654,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "configs/router.js",
-			"settings":
-			{
-				"buffer_size": 824,
+				"buffer_size": 1716,
 				"line_ending": "Unix"
 			}
 		}
@@ -213,6 +201,10 @@
 			[
 				"inde",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"co",
+				"Git: Commit"
 			],
 			[
 				"ind",
@@ -336,13 +328,13 @@
 	],
 	"file_history":
 	[
+		"/home/shrikanth/node-apps/android-socketio/models/message.js",
+		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
+		"/home/shrikanth/node-apps/android-socketio/index.html",
 		"/home/shrikanth/node-apps/android-socketio/models/room.js",
 		"/home/shrikanth/node-apps/android-socketio/controllers/rooms.js",
-		"/home/shrikanth/node-apps/android-socketio/index.html",
-		"/home/shrikanth/node-apps/android-socketio/models/message.js",
 		"/home/shrikanth/node-apps/android-socketio/controllers/users.js",
 		"/home/shrikanth/node-apps/android-socketio/node_modules/socket.io-redis/node_modules/redis/benches/reconnect_test.js",
-		"/home/shrikanth/node-apps/android-socketio/configs/router.js",
 		"/home/shrikanth/node-apps/android-socketio/socket.js",
 		"/home/shrikanth/node-apps/android-socketio/libs/mongo.js",
 		"/home/shrikanth/node-apps/android-socketio/package.json",
@@ -567,7 +559,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -596,7 +588,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -605,15 +597,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1936,
+						"buffer_size": 2053,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								563,
-								563
+								703,
+								703
 							]
 						],
 						"settings":
@@ -623,10 +615,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 810.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -635,15 +627,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 988,
+						"buffer_size": 1154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								549,
-								549
+								687,
+								687
 							]
 						],
 						"settings":
@@ -656,7 +648,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -684,7 +676,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -693,73 +685,45 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 958,
+						"buffer_size": 983,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "models/message.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 375,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								232,
-								232
+								830,
+								830
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 162.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1654,
+						"buffer_size": 1716,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								680,
-								680
+								1406,
+								1406
 							]
 						],
 						"settings":
@@ -768,40 +732,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "configs/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								761,
-								761
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
 						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

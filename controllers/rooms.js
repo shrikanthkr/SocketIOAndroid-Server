@@ -30,13 +30,17 @@ module.exports = (function(){
 
 	function contacts(socket,params){
 		console.log('getting contacts rooms');
-		var final_room_ids = [];
+		var room_names = [];
 		params.push(socket.client.user.phone_number);
-		Room.find()
-		.populate( 'members', '-rooms', { phone_number: { $in: params} } )
-		.exec(function(err,rooms){
-			socket.emit('rooms:contacts',rooms);
-		});
+		User.where('phone_number').in(params)
+		.exec(function(err,users) {
+			room_names = _.pluck(users,'user_name');
+			Room.where('name').in(room_names).populate('members')
+			.exec(function(err,rooms) {
+				socket.emit('rooms:contacts',rooms);
+			});
+		})
+
 	}
 	return{
 		add: add,
