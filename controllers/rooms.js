@@ -35,7 +35,9 @@ module.exports = (function(){
 		User.where('phone_number').in(params)
 		.exec(function(err,users) {
 			room_names = _.pluck(users,'user_name');
-			Room.where('name').in(room_names).populate('members','-rooms')
+			Room.where('name').in(room_names)
+			.select('-messages')
+			.populate('members','-rooms -messages')
 			.exec(function(err,rooms) {
 				socket.emit('rooms:contacts',rooms);
 			});
